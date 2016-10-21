@@ -21,6 +21,7 @@
         <input class="btn" type="submit" name="accion" value="Devolución" />
         <input class="btn" type="submit" name="accion" value="Movimientos" />
     </fieldset>
+    
 	<?php
 	//Hacemos llamada al archivo de funciones
 	include 'funciones.php';
@@ -36,7 +37,7 @@
 	//Ahora capturaremos las acciones del formulario y de sus diferentes botones.
 	//Dependiendo de la acción, se mostrará un formulario o se tomará una acción concreta.
 
-	
+
     if (isset($_REQUEST['accion'])) { //Si se pulsa un boton del formulario....
         $accion = $_REQUEST['accion']; //Se captura el valor de ese boton de acción
         switch ($accion) { //Seleccionamos según ese valor del boton

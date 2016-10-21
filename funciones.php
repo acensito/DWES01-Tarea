@@ -17,10 +17,15 @@ function formulario ($accion){
     <!-- Formulario a mostrar, reutilizable para pagos e ingresos -->
     <fieldset class="menu"> 
         <?php echo "<legend>" . $etiqueta . "</legend>"; ?>
-            Fecha: <input type="text" name="fecha" />
-            Concepto: <input type="text" name="concepto" />
-            Cantidad: <input type="text" name="cantidad" />
-            <input type="submit" name="accion" value="<?php echo $boton; ?>">
+        Fecha: <input type="text" name="fecha" />
+        Concepto: <input type="text" name="concepto" />
+        <!--<div class="input-group">
+            <span class="input-group-addon">€</span>
+            <input type="text" class="form-control" name="concepto">
+            <span class="input-group-addon">0.00</span>
+        </div>-->
+        Cantidad: <input type="text" name="cantidad" />
+        <input type="submit" name="accion" value="<?php echo $boton; ?>">
     </fieldset>
 <?php
 }
