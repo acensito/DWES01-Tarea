@@ -1,0 +1,23 @@
+html {
+    background-color: #e6e9e9;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    margin: 2em auto;
+    padding: 2em 2em 4em;
+    max-width: 800px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #545454;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+p {
+    font-style: italic;
+    text-align: justify;
+}
+
+h1, h2 {text-align: center;}
