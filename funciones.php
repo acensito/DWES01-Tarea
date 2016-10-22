@@ -13,19 +13,14 @@ function formulario ($accion){
         $etiqueta = "Formulario de pagos bancarios"; //Nombre de la etiqueta del fieldset
         $boton = "Pagar"; //Nombre del boton
     }
-?>
+    ?>
     <!-- Formulario a mostrar, reutilizable para pagos e ingresos -->
     <fieldset class="menu"> 
         <?php echo "<legend>" . $etiqueta . "</legend>"; ?>
-        Fecha: <input type="text" name="fecha" />
-        Concepto: <input type="text" name="concepto" />
-        <!--<div class="input-group">
-            <span class="input-group-addon">€</span>
-            <input type="text" class="form-control" name="concepto">
-            <span class="input-group-addon">0.00</span>
-        </div>-->
-        Cantidad: <input type="text" name="cantidad" />
-        <input type="submit" name="accion" value="<?php echo $boton; ?>">
+            Fecha: <input type="text" name="fecha" />
+            Concepto: <input type="text" name="concepto" />
+            Cantidad: <input type="text" name="cantidad" />
+            <input type="submit" name="accion" value="<?php echo $boton; ?>">
     </fieldset>
 <?php
 }
@@ -112,7 +107,7 @@ function muestraRecibos ($lista){
         if ($existe_flag) { //Si existen recibos, mostramos los botones de devolver y cancelar debajo de la tabla de movimientos
             echo "</table>"; //Cerramos la tabla de movimientos
             echo "<div class='centrado'><input type='submit' name='accion' value='Devolver'> <input type='submit' name='accion' value='Cancelar'></div>"; //Creamos los botones de accion Devolver y Cancelar
-        } else if (($existe_flag === false) AND (!empty($lista))) { //Si no existieran recibos y la lista tuviera aun asi movimientos...
+        } else if (($existe_flag === false) OR (!empty($lista))) { //Si no existieran recibos y la lista tuviera aun asi movimientos...
             echo "<tr class='centrado'><td colspan='4'>No existen recibos que visualizar</td></tr></table>"; //Mostramos mensaje de feedback...
         }
         

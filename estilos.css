@@ -1,0 +1,81 @@
+
+/* 
+ *   Creado el : 18-nov-2015, 23:53:42
+ *   Modificado: 22-oct-2016, 21:25:00
+ *   Autor     : Felipe Rodríguez Gutiérrez
+ */
+html {
+    background-color: #e6e9e9;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+fieldset {
+    border: 1px solid #545454;
+}
+
+.menu {
+    text-align: center;
+    border-radius: 5px;
+}
+.centrado{
+    text-align: center;
+}
+
+table {
+    margin-top: 2px;
+    width: 100%;
+    border: 1px solid #545454;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.encabezado {
+    border: none;
+    background-color: #545454;
+    color: #ffffff;
+    margin: 0;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+.negativo {
+    color: indianred;
+    text-align: right;
+}
+
+.error {
+    color: indianred;
+}
+
+.perfect {
+    color: green;
+    text-align: center;
+}
+
+.contable {
+    text-align: right;
+}
+
+.saldoFinal td {
+    border-top: 1px dotted #545454;
+    font-weight: bold;
+    text-align: right;
+}
+
+footer {
+    font-size: 0.5em;
+    margin-top: 20px;
+    text-align: center;
+}

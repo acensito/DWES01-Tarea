@@ -7,20 +7,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DWES - Tarea01 - Felipe Rodríguez Gutiérrez</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css" >
-	<link rel="stylesheet" type="text/css" href="css/estilos.css" >
+	<link rel="stylesheet" type="text/css" href="estilos.css" >
 </head>
 <body>
-	<h1>Tarea01: DIODOS BANK</h1>
-	<h2>Felipe Rodríguez Gutiérrez</h2>
+	<h1 class="centrado">Tarea01: DIODOS BANK</h1>
+	<h2 class="centrado">Felipe Rodríguez Gutiérrez</h2>
 
-	<form name="form" class="container form-inline" role="form" action="index.php" method="post">
-    <fieldset>
-        <input class="btn" type="submit" name="accion" value="Ingreso" />
-        <input class="btn" type="submit" name="accion" value="Pago" />
-        <input class="btn" type="submit" name="accion" value="Devolución" />
-        <input class="btn" type="submit" name="accion" value="Movimientos" />
-    </fieldset>
+    <!-- Conformamos el formulario con el que trabajaremos -->
+    <form name="form" action="index.php" method="post">
+    
+    <!-- Conformamos el menu de usuario -->    
+    <fieldset class="menu">
+        <input type="submit" name="accion" value="Ingreso" />
+        <input type="submit" name="accion" value="Pago" />
+        <input type="submit" name="accion" value="Devolución" />
+        <input type="submit" name="accion" value="Movimientos" />
+    </fieldset>   
     
 	<?php
 	//Hacemos llamada al archivo de funciones
@@ -52,7 +54,7 @@
                 //Activamos un flag de control (true/false) pasandole los valores del ingreso para validarlos
                 $flag = validacion($_REQUEST['fecha'], $_REQUEST['concepto'], $_REQUEST['cantidad']);
                 
-                if ($flag) { //En el caso de que sea falso...
+                if ($flag) { //En el caso de que sea falso (existe un error)...
                     echo $flag; //Mostrará los valores de retorno de la funcion con los mensajes de validación
                     formulario("Ingreso"); //Mostrará el formulario nuevamente
                 } else { //Caso contrario...
@@ -78,14 +80,14 @@
                 //Activamos un flag de control (true/false) pasandole los valores del ingreso para validarlos
                 $flag = validacion($_REQUEST['fecha'], $_REQUEST['concepto'], $_REQUEST['cantidad']);
                 
-                if ($flag) { //En el caso de que sea falso...
+                if ($flag) { //En el caso de que sea falso (existe un error)...
                     echo $flag; //Mostrará los valores de retorno de la funcion con los mensajes de validación
                     formulario($accion); //Mostrará el formulario nuevamente
                 } else { //Caso contrario...
                     $movimiento = array( //Creará un movimiento de pago, con los valores introducidos
                         'fecha' => $_REQUEST['fecha'],
                         'concepto' => $_REQUEST['concepto'],
-                        'cantidad' => -$_REQUEST['cantidad'] //Ojo, en este caso negativizamos el valor
+                        'cantidad' => -$_REQUEST['cantidad'] //OJO!!, en este caso negativizamos el valor
                     );
                     $movimientos[] = $movimiento; //Se incluye el movimiento de pago creado al array de movimientos  
 
@@ -100,7 +102,6 @@
                 break;
             
             case 'Devolver': //Si pulsamos en el botón "Devolver"...
-                //$movimientos = devuelveRecibo($movimientos); //sistema antiguo, a eliminar.
                 devuelveRecibo($movimientos); //Hacemos una devolución
                 muestraMovimientos($movimientos); //mostramos los movimientos y como quedan
                 break;
@@ -117,9 +118,7 @@
         }
     }
     
-    /**
-     * Este es el input hidden que recibirá los valores del array de movimientos y se remandarán
-     */
+    //Este es el input hidden que recibirá los valores del array de movimientos y se remandarán
     foreach ($movimientos as $clave => $valor) {
         echo '<input type="hidden" name="movimientos[' . $clave . '][fecha]"     value="' . $valor['fecha'] . '">'; //Fechas
         echo '<input type="hidden" name="movimientos[' . $clave . '][concepto]"  value="' . $valor['concepto'] . '">'; //Conceptos  
