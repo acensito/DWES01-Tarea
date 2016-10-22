@@ -19,7 +19,7 @@ function formulario ($accion){
         <?php echo "<legend>" . $etiqueta . "</legend>"; ?>
             Fecha: <input type="text" name="fecha" />
             Concepto: <input type="text" name="concepto" />
-            Cantidad: <input type="text" name="cantidad" />
+            Cantidad: <input type="text" name="cantidad" /><br>
             <input type="submit" name="accion" value="<?php echo $boton; ?>">
     </fieldset>
 <?php

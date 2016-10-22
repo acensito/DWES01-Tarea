@@ -18,11 +18,30 @@ body {
     line-height: 1.5em;
     margin: 2em auto;
     max-width: 800px;
-    padding: 2em 2em 4em;
+    padding: 2em 2em 2em;
 }
 
 fieldset {
     border: 1px solid #545454;
+    padding: 4px;
+}
+
+input[type=submit] {
+    background-color: #545454;
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+input[type=submit]:active {
+    background-color: #505050;
 }
 
 .menu {
@@ -75,7 +94,7 @@ table {
 }
 
 footer {
-    font-size: 0.5em;
-    margin-top: 20px;
+    font-size: 0.8em;
+    margin-top: 40px;
     text-align: center;
 }
