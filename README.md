@@ -1,4 +1,3 @@
-##
 #  DWES - Tarea 2
 
 ## Enunciado:
@@ -10,9 +9,9 @@ La tarea consta de 4 partes:
 - En la 3ª realizarás una aplicación web con PHP
 - En la 4ª documentaras todo el proceso y te auto-evaluarás, pero se recomienda ir realizando esto a la vez que se resuelven los apartados y no dejarlo para el final.
 
-Todo será entregado en un  **único documento****. **Encontrarás la plantilla que has de rellenar en el apartado &quot;Recursos necesarios&quot; de esta tarea. No olvides cambiar el nombre del documento poniendo tus datos tal y como se indica en el apartado &quot;Indicaciones de entrega&quot;.
+Todo será entregado en **un único documento**. Encontrarás la plantilla que has de rellenar en el apartado &quot;Recursos necesarios&quot; de esta tarea. No olvides cambiar el nombre del documento poniendo tus datos tal y como se indica en el apartado &quot;Indicaciones de entrega&quot;.
 
-**PARTE I:****  SUPUESTO PRÁCTICO**
+##**PARTE I: SUPUESTO PRÁCTICO**
 
 Se quiere programar una aplicación web para acceder a la banca electrónica del banco ético Diodos Bank. En principio, la aplicación se compondrá sólo de tres páginas:
 
@@ -27,7 +26,7 @@ Preguntas:
 3. Si se decide utilizar una arquitectura AMP, ¿qué lenguajes se podrían usar para programar las páginas dinámicas?
 4. ¿Qué componentes necesitas instalar en tu servidor para ejecutar la aplicación si se quiere usar una arquitectura AMP?
 
-**PARTE II:****  INSTALACIÓN** DE SW
+##**PARTE II: INSTALACIÓN DE SW**
 
 Instala en el  **sistema operativo windows**  (si trabajas con linux puedes crear una máquina virtual windows 7 o windows 8 con VirtualBox) el **jdk8u60**  (o la última que haya en el momento de la instalación),  **Netbeans 8.0.2**  y el paquete  **Xampp 1.8.3**  para Windows o XAMPP Portable Lite 1.8.3 (si trabajas con Windows XP tendrás que usar la versión 1.8.2 que usa PHP 5.4.19 en lugar de 5.5.3 ya que la versión anterior no está soportada para XP ni para  2003, haciendo una captura de tu sistema operativo para justificar el uso de esta versión, para esta tarea no se debe instalar la versión 1.8.2 a no ser que esté debidamente justificado).
 
@@ -48,11 +47,11 @@ Haz capturas de las pantallas de la instalación que se indican a continuación 
 
 **NOTA 3** : [OPCIONAL] Si quieres usar Windows 10 o cualquier distro de GNU/Linux también es recomendable que te familiarices y aprendas de estos entornos, sobre todo GNU/Linux puesto que es el  [entorno más usado en servidores Web](https://w3techs.com/technologies/overview/operating_system/all) , y en particular  [Ubuntu el más usado dentro de los GNU/Linux](https://w3techs.com/technologies/details/os-linux/all/all) . De hecho será el entorno que yo use para corregir, pero desafortunadamente aún no podemos conseguir que el entorno del examen sea éste. Sin ánimo de crear polémica... en el foro del punto de encuentro del alumnado podéis aportar vuestras ideas/sugerencias para intentar conseguirlo en éste y otros módulos. Se me ocurre por ejemplo permitir que llevéis un pendrive con una distro Live con persistencia y todo vuestro entorno preparado, aunque podría darse el caso de BIOS bloqueadas, problemas con EFI, drivers gráficos, red desconfigurada, etc. que tendríais que asumir como riesgo.
 
-NOTA 4: Para entender las distintas versiones de XAMPP puedes consultaren la [Wikipedia](https://en.wikipedia.org/wiki/XAMPP). La versión que usaremos será la última que usaba PHP 5.5 con MySQL antes de pasar a MariaDB en posteriores versiones.
+**NOTA 4**: Para entender las distintas versiones de XAMPP puedes consultaren la [Wikipedia](https://en.wikipedia.org/wiki/XAMPP). La versión que usaremos será la última que usaba PHP 5.5 con MySQL antes de pasar a MariaDB en posteriores versiones.
 
 
 
-**PARTE III:****  **APLICACIÓN WEB EN PHP
+##**PARTE III: APLICACIÓN WEB EN PHP**
 
 Crea una pequeña aplicación web (en php) que gestione operaciones sencillas de nuestro banco:  **Diodos Bank **. Lo primero que mostrará es un pequeño menú con las siguientes opciones:
 
@@ -71,7 +70,7 @@ La fecha hace referencia al día en el que se realiza la operación (ingreso o p
 
 Toda la información referente a los movimientos (las operaciones de ingreso y pago) será almacenada en un  **array**. Todos los campos son obligatorios. Si la inserción ( **ingreso**  o  **pago** ) se efectúa correctamente se debe avisar al usuario y mostrar la lista de los últimos movimientos. En el caso de que la inserción no fuese satisfactoria se notificarán los errores y el formulario seguirá mostrando los campos que se habían intentado introducir para poder modificarlos.
 
-A la hora de  **mostrar los últimos movimientos**  se debe mostrar bien en una tabla (haciendo uso del tag &lt;table&gt; de HTML) o si se prefiere usar CSS haciendo uso de la propiedad display (display: table) una fila por cada elemento de la lista de la compra. Por cada fila deben aparecer 4 columnas: Fecha, Concepto, Cantidad,  **Saldo contable**. Las tres primeras hacen referencia a la información almacenada y la cuarta es un campo calculado consistente en el saldo total después de cada operación. Al final del listado se debe mostrar el saldo contable actual con formato destacado. Si no hay nada que mostrar se debe avisar al usuario.
+A la hora de  **mostrar los últimos movimientos**  se debe mostrar bien en una tabla (haciendo uso del tag `<table>` de HTML) o si se prefiere usar CSS haciendo uso de la propiedad display (`display: table`) una fila por cada elemento de la lista de la compra. Por cada fila deben aparecer 4 columnas: Fecha, Concepto, Cantidad,  **Saldo contable**. Las tres primeras hacen referencia a la información almacenada y la cuarta es un campo calculado consistente en el saldo total después de cada operación. Al final del listado se debe mostrar el saldo contable actual con formato destacado. Si no hay nada que mostrar se debe avisar al usuario.
 
 Para la  **devolución de recibos**  deberás listar los recibos con los 3 campos principales (Fecha, Concepto y Cantidad), en el caso de que hubiesen, sino, habría que notificarlo al usuario. La devolución consistirá en la eliminación del recibo, y por consiguiente en la desaparición del array de movimientos. En caso de que la eliminación se haya efectuado correctamente se debe avisar al usuario y mostrar la lista de recibos restantes, en el caso de que hubiesen.
 
@@ -84,11 +83,11 @@ Deben utilizarse funciones, pueden crearse tantas como se precisen. Al menos exi
 - Calcular\_Saldo\_Contable: tendrá un parámetro de salida que devolverá la cantidad calculada (se hará paso por referencia).
 - Validar\_Datos: Validar los campos de fecha, concepto y cantidad.
 
- Todas las funciones deben ser implementadas en un fichero independiente llamado  **funciones.php**
+Todas las funciones deben ser implementadas en un fichero independiente llamado  **funciones.php**
 
 
 
-**PARTE IV:****  **Auto-evaluación
+##**PARTE IV: Auto-evaluación**
 
 Por último, tienes que  **AUTO-EVALUARTE** , justificando si fuese necesario las notas de cada apartado.
 
@@ -97,9 +96,9 @@ Por último, tienes que  **AUTO-EVALUARTE** , justificando si fuese necesario la
 **NOTAS IMPORTANTES:**
 
 - La entrega de cada apartado de la tarea consiste en:
-  - A la vez que realizas los apartados de la tarea, elaborar un documento de texto en formato  **.** ODT con una guía (muy resumida, no pierdas demasiado tiempo en esto) y capturas si son necesarias de cada apartado, sobre todo para mostrar que funciona, usando **títulos, un sumario con índices navegables (** [**pincha aquí**](http://aplicacionesysistemas.com/indice-con-libreoffice-writer-video-tutorial/#more-198) ** para ver una guía de cómo hacerlos o ** [**aquí**](https://help.libreoffice.org/Writer/Creating_a_Table_of_Contents/es)** para la última documentación oficial)**, copiando el enunciado de cada apartado e indicando las partes más importantes del código necesario para resolver la cuestión correspondiente.
+  - A la vez que realizas los apartados de la tarea, elaborar un documento de texto en formato  **.ODT** con una guía (muy resumida, no pierdas demasiado tiempo en esto) y capturas si son necesarias de cada apartado, sobre todo para mostrar que funciona, usando **títulos**, un sumario con índices navegables ([**pincha aquí**](http://aplicacionesysistemas.com/indice-con-libreoffice-writer-video-tutorial/#more-198) para ver una guía de cómo hacerlos o [**aquí**](https://help.libreoffice.org/Writer/Creating_a_Table_of_Contents/es) para la última documentación oficial), copiando el enunciado de cada apartado e indicando las partes más importantes del código necesario para resolver la cuestión correspondiente.
     - El archivo .ODT debe ser editado desde LibreOffice u OpenOffice. En &quot;Archivo -&gt; Propiedades&quot; me debe dar una idea del tiempo que se ha tardado en su edición. Si falta el .ODT restará 1 punto.  **Desde el propio LibreOffice se debe exportar a PDF, lo que generará un PDF con índices navegables a la izquierda**.
-  - **En cada apartado hay que apoyar la documentación **** y comprobar que funciona **** con alguna/s capturas de pantalla. Se recomienda alguna herramienta que agilice el proceso como ** [**Shutter**](http://shutter-project.org/)** (Linux) o ** [**GreenShot**](http://alternativeto.net/software/greenshot/)** (Windows). En alguna de ellas (todas las que se pueda), se debe ver la plataforma con vuestra foto del perfil (la foto que os aparece arriba a la derecha).**
+  - **En cada apartado hay que apoyar la documentación y comprobar que funciona con alguna/s capturas de pantalla. Se recomienda alguna herramienta que agilice el proceso como** [**Shutter**](http://shutter-project.org/) (Linux) o [**GreenShot**](http://alternativeto.net/software/greenshot/) (Windows). En alguna de ellas (todas las que se pueda), se debe ver la plataforma con vuestra foto del perfil (la foto que os aparece arriba a la derecha).
   - El fichero . **ZIP**  a subir en la tarea debe contener una carpeta llamada  **Apellido1\_Apellido2\_Nombre\_DWES01\_Tarea**  que contenga:
     - El documento de texto . **ODT**  explicativo y el mismo documento exportado a . **PDF. Si falta el ** [**índice**](http://aplicacionesysistemas.com/indice-con-libreoffice-writer-video-tutorial/#more-198) ** de contenidos &quot;navegable&quot; en el pdf restará 1 punto.**
     - La hoja de cálculo de auto-evaluación .ODS
@@ -110,9 +109,7 @@ Por último, tienes que  **AUTO-EVALUARTE** , justificando si fuese necesario la
 
 Si hay partes copiadas de otros años o de otros alumnos se darán por inválidas las tareas de ambos alumnos.
 
-##
-
-## Criterios de corrección:
+## **Criterios de corrección:**
 
 **NOTA\_TOTAL\_TAREA 1 = 0,5\*NOTA\_PARTES1y2 + 0,5\*NOTA\_PARTE3**
 
@@ -189,9 +186,7 @@ El alumno/a debe comprobar una vez subida la tarea que la entrega está correcta
 
 Si se detecta que que el/la alumno/a ha copiado en alguna de las tareas supondrá una calificación de 0 puntos en ésta. Si la copia se ha realizado de otro/a alumno/a supondrá una calificación de 0 puntos en dicha tarea para ambos alumnos/as.
 
-##
-
-## Recursos necesarios:
+## **Recursos necesarios:**
 
 [Plantilla para realizar la tarea](http://www.juntadeandalucia.es/educacion/gestionafp/datos/tareas/DAW/DWES_14076/2016-17/DAW_DWES_1_2016-17_Individual__383198/Apellido1_Apellido2_Nombre_DWES1_Tarea_E1.odt)
 
@@ -218,5 +213,3 @@ Enlaces de ayuda para la elaboración de la tarea:
 [Uso de la etiqueta div en HTML ](http://www.w3schools.com/tags/tag_div.asp)(inglés).  [Otro enlace](http://librosweb.es/css/capitulo_12/estructura_o_layout.html) (español).
 
 [Uso de la propiedad display de CSS](http://librosweb.es/css_avanzado/capitulo_4/propiedad_display.html) para simular tablas.
-
-## Corrección:
